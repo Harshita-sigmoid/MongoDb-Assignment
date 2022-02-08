@@ -1,0 +1,11 @@
+ddb.getCollection('col_the').find({
+    "location.geo":
+         {
+             "$near":
+                              {
+                     "$geometry": {"type": "Point", "coordinates": [-93.24565, 44.85466]},
+                     "$minDistance": 0,
+                     "$maxDistance": 5000
+                 }
+         }
+ }).limit(10)
